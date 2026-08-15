@@ -13,7 +13,7 @@
     isCalculated: false,
     angleMode: localStorage.getItem('qc_angle_mode') || 'DEG',
     mode: localStorage.getItem('qc_mode') || 'standard',
-    theme: localStorage.getItem('qc_theme') || 'cyberpunk',
+    theme: (localStorage.getItem('qc_theme') && localStorage.getItem('qc_theme') !== 'cyberpunk') ? localStorage.getItem('qc_theme') : 'nature',
     sound: localStorage.getItem('qc_sound') !== 'false',
     history: JSON.parse(localStorage.getItem('qc_history') || '[]')
   };

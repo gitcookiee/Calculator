@@ -56,6 +56,51 @@
   --radius-sm: 10px;
 }
 
+/* Theme: Forest River Nature */
+[data-theme="nature"] {
+  --bg-gradient: linear-gradient(135deg, rgba(3, 15, 10, 0.82) 0%, rgba(6, 26, 18, 0.75) 100%),
+    url('https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat fixed;
+  --card-bg: rgba(13, 35, 24, 0.75);
+  --card-border: rgba(45, 212, 191, 0.22);
+  --card-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  
+  --text-main: #f0fdf4;
+  --text-muted: #86efac;
+  --brand-accent: #2dd4bf;
+  
+  --display-bg: rgba(6, 20, 14, 0.65);
+  --display-border: rgba(45, 212, 191, 0.15);
+  
+  --btn-num-bg: rgba(255, 255, 255, 0.07);
+  --btn-num-hover: rgba(255, 255, 255, 0.14);
+  --btn-num-text: #f0fdf4;
+  
+  --btn-func-bg: rgba(52, 211, 153, 0.15);
+  --btn-func-hover: rgba(52, 211, 153, 0.28);
+  --btn-func-text: #34d399;
+  
+  --btn-op-bg: rgba(56, 189, 248, 0.18);
+  --btn-op-hover: rgba(56, 189, 248, 0.32);
+  --btn-op-text: #38bdf8;
+  
+  --btn-equals-bg: linear-gradient(135deg, #2dd4bf 0%, #10b981 100%);
+  --btn-equals-hover: linear-gradient(135deg, #5eead4 0%, #059669 100%);
+  --btn-equals-text: #042f2e;
+  --btn-equals-shadow: 0 8px 24px rgba(45, 212, 191, 0.35);
+
+  --btn-sci-bg: rgba(45, 212, 191, 0.1);
+  --btn-sci-hover: rgba(45, 212, 191, 0.2);
+  --btn-sci-text: #5eead4;
+  
+  --badge-deg-bg: rgba(45, 212, 191, 0.18);
+  --badge-deg-text: #2dd4bf;
+  --badge-mem-bg: rgba(250, 204, 21, 0.22);
+  --badge-mem-text: #facc15;
+
+  --history-panel-bg: rgba(8, 24, 17, 0.94);
+  --history-item-hover: rgba(255, 255, 255, 0.06);
+}
+
 /* Theme: Glass Light */
 [data-theme="glass"] {
   --bg-gradient: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
@@ -341,6 +386,7 @@ body {
   border-radius: 50%;
   display: inline-block;
 }
+.theme-dot.nature { background: #2dd4bf; box-shadow: 0 0 6px #2dd4bf; }
 .theme-dot.cyberpunk { background: #00f2fe; box-shadow: 0 0 6px #00f2fe; }
 .theme-dot.glass { background: #3b82f6; }
 .theme-dot.oled { background: #10b981; }
@@ -486,49 +532,21 @@ body {
   animation: fadeInDown 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Standard Keypad Grid */
+/* Standard Keypad Grid - 20-column layout supporting 5 items in Row 1 & 4 items in Rows 2-5 */
 .std-keypad {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(20, 1fr);
   gap: 10px;
 }
 
-.std-keypad .key-func:nth-child(1),
-.std-keypad .key-func:nth-child(2),
-.std-keypad .key-func:nth-child(3),
-.std-keypad .key-operator:nth-child(4),
-.std-keypad .key-operator:nth-child(5) {
-  /* Row 1 layout adjustments */
+/* Row 1 (5 items: AC, ⌫, (), %, ÷) - 4 cols each = 20 total */
+.std-keypad > :nth-child(-n+5) {
+  grid-column: span 4;
 }
 
-/* Specific layout adjustments for 5 items in top row of standard keypad */
-.std-keypad {
-  grid-template-columns: repeat(4, 1fr);
-}
-
-/* Modify row 1 to fit 5 items cleanly by spanning grid or nesting */
-.std-keypad {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-}
-
-/* Override: Top function row in std-keypad uses 5 items cleanly */
-.std-keypad {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-areas:
-    "r1 r1 r1 r1"
-    "n7 n8 n9 op1"
-    "n4 n5 n6 op2"
-    "n1 n2 n3 op3"
-    "neg n0 dec eq";
-}
-
-/* Define explicit placement for row 1 wrapper if needed, or use grid column spans */
-.std-keypad {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
+/* Rows 2-5 (4 items per row) - 5 cols each = 20 total */
+.std-keypad > :nth-child(n+6) {
+  grid-column: span 5;
 }
 
 /* Standard key sizes */
