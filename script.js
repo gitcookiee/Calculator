@@ -578,8 +578,13 @@
     });
 
     document.querySelectorAll('.theme-opt').forEach(btn => {
-      btn.addEventListener('click', () => {
-        setTheme(btn.dataset.theme);
+      btn.addEventListener('click', e => {
+        e.stopPropagation();
+        const targetTheme = btn.getAttribute('data-theme');
+        if (targetTheme) {
+          setTheme(targetTheme);
+          playKeyClickSound('click');
+        }
         el.themeDropdown.classList.add('hidden');
       });
     });

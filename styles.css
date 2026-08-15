@@ -56,10 +56,55 @@
   --radius-sm: 10px;
 }
 
-/* Theme: Forest River Nature */
+/* Theme: Cyberpunk Neon Bridge */
+[data-theme="cyberpunk"] {
+  --bg-gradient: linear-gradient(135deg, rgba(13, 10, 26, 0.82) 0%, rgba(20, 8, 30, 0.75) 100%),
+    url('https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat fixed;
+  --card-bg: rgba(23, 19, 36, 0.75);
+  --card-border: rgba(255, 255, 255, 0.12);
+  --card-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  
+  --text-main: #f0f2f8;
+  --text-muted: #8b8eab;
+  --brand-accent: #00f2fe;
+  
+  --display-bg: rgba(10, 8, 18, 0.6);
+  --display-border: rgba(255, 255, 255, 0.08);
+  
+  --btn-num-bg: rgba(255, 255, 255, 0.06);
+  --btn-num-hover: rgba(255, 255, 255, 0.12);
+  --btn-num-text: #ffffff;
+  
+  --btn-func-bg: rgba(255, 255, 255, 0.1);
+  --btn-func-hover: rgba(255, 255, 255, 0.18);
+  --btn-func-text: #00f2fe;
+  
+  --btn-op-bg: rgba(255, 0, 127, 0.15);
+  --btn-op-hover: rgba(255, 0, 127, 0.28);
+  --btn-op-text: #ff3b94;
+  
+  --btn-equals-bg: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+  --btn-equals-hover: linear-gradient(135deg, #38f9d7 0%, #4facfe 100%);
+  --btn-equals-text: #080c16;
+  --btn-equals-shadow: 0 8px 24px rgba(0, 242, 254, 0.35);
+
+  --btn-sci-bg: rgba(0, 242, 254, 0.08);
+  --btn-sci-hover: rgba(0, 242, 254, 0.16);
+  --btn-sci-text: #70e4ef;
+  
+  --badge-deg-bg: rgba(0, 242, 254, 0.15);
+  --badge-deg-text: #00f2fe;
+  --badge-mem-bg: rgba(255, 184, 0, 0.2);
+  --badge-mem-text: #ffb800;
+
+  --history-panel-bg: rgba(15, 12, 25, 0.92);
+  --history-item-hover: rgba(255, 255, 255, 0.05);
+}
+
+/* Theme: Forest & River Wildlife */
 [data-theme="nature"] {
   --bg-gradient: linear-gradient(135deg, rgba(3, 15, 10, 0.82) 0%, rgba(6, 26, 18, 0.75) 100%),
-    url('https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat fixed;
+    url('https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat fixed;
   --card-bg: rgba(13, 35, 24, 0.75);
   --card-border: rgba(45, 212, 191, 0.22);
   --card-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.1);
@@ -101,15 +146,16 @@
   --history-item-hover: rgba(255, 255, 255, 0.06);
 }
 
-/* Theme: Glass Light */
+/* Theme: Cloud Mountain Bridge */
 [data-theme="glass"] {
-  --bg-gradient: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+  --bg-gradient: linear-gradient(135deg, rgba(230, 240, 255, 0.65) 0%, rgba(210, 225, 250, 0.55) 100%),
+    url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat fixed;
   --card-bg: rgba(255, 255, 255, 0.65);
   --card-border: rgba(255, 255, 255, 0.6);
   --card-shadow: 0 20px 50px rgba(31, 38, 135, 0.18), inset 0 1px 1px rgba(255, 255, 255, 0.8);
   
   --text-main: #1e293b;
-  --text-muted: #64748b;
+  --text-muted: #475569;
   --brand-accent: #3b82f6;
   
   --display-bg: rgba(255, 255, 255, 0.45);
@@ -145,12 +191,13 @@
   --history-item-hover: rgba(0, 0, 0, 0.04);
 }
 
-/* Theme: Deep Space OLED */
+/* Theme: Cosmic Nebula & Wildlife */
 [data-theme="oled"] {
-  --bg-gradient: #000000;
-  --card-bg: #09090b;
+  --bg-gradient: linear-gradient(135deg, rgba(0, 0, 0, 0.82) 0%, rgba(4, 8, 12, 0.75) 100%),
+    url('https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat fixed;
+  --card-bg: rgba(9, 9, 11, 0.82);
   --card-border: #27272a;
-  --card-shadow: 0 0 0 1px #27272a;
+  --card-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
   
   --text-main: #f4f4f5;
   --text-muted: #71717a;
@@ -185,7 +232,7 @@
   --badge-mem-bg: rgba(245, 158, 11, 0.2);
   --badge-mem-text: #fbbf24;
 
-  --history-panel-bg: #09090b;
+  --history-panel-bg: rgba(9, 9, 11, 0.95);
   --history-item-hover: #18181b;
 }
 
