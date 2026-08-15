@@ -44,22 +44,6 @@ A sleek, modern, and responsive scientific calculator web app built with vanilla
 | `Escape` or `C` | Clear All (`AC`) |
 | `S`, `O`, `T` | Quick trigger `sin`, `cos`, `tan` |
 
----
-
-## 🚀 Local Development Setup
-
-Simply open `index.html` in any modern web browser or serve via a local HTTP server:
-
-```bash
-# Using Node.js npx http-server
-npx http-server .
-```
-
-Or open directly in browser:
-`file:///c:/Users/SACHIN%20DUBEY/Desktop/coding/git/Calculator/index.html`
-
----
-
 ## 🛠️ Technology Stack
 
 - **HTML5**: Semantic document layout & ARIA accessibility attributes.
